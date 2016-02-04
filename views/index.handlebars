@@ -30,14 +30,14 @@
 <body>
 <div class="container">
 	<h1>My HCI Friends</h1>
-
-{{#each friends}}
-		<!--img src = "{{image}}" class = "imageURL"-->
-		<img src = {{imageURL}}>
-		<h3> {{name}} </h3>
-		<p> {{description}} </p>
-	</a>
-	</div>
+ {{#each friends}}
+    <div class="friends" id="{{name}}">
+      <a href="friends" class="thumbnail">
+        <img src="{{imageURL}}" class="img-responsive">
+        <p>{{name}}</p>
+        <p>{{description}}</p>
+      </a>
+    </div>
 {{/each}}
 	
 	<form id="addFriendForm" role="form" method="get" action="/add">
